@@ -9,8 +9,8 @@ def get_petstore_inventory(
     path:str = "/v2/store/inventory",
     secure:bool = True
 ):
-    logger = get_run_logger()
-    logger.info("In the get_petstore_inventory task")
+    # logger = get_run_logger()
+    # logger.info("In the get_petstore_inventory task")
 
     if path[0] != "/":
         path = f"/{path}"
@@ -46,8 +46,8 @@ def insert_results(
     db_name,
     db_host
 ):
-    logger = get_run_logger()
-    logger.info("In the insert_results task")
+    # logger = get_run_logger()
+    # logger.info("In the insert_results task")
     with psycopg2.connect(
         user=db_user, password=db_password, dbname=db_name, host=db_host
     ) as conn:
@@ -86,8 +86,8 @@ def collect_petstore_info(
         db_name,
         db_host,
     )
-    logger = get_run_logger()
-    logger.info("All the tasks have been completed!!")
+    # logger = get_run_logger()
+    # logger.info("All the tasks have been completed!!")
 
 def main():
     collect_petstore_info.serve(name = 'petstore-inventory-check')
