@@ -1,0 +1,4 @@
+pytest
+prefect
+httpx
+psycopg2
