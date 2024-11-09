@@ -51,9 +51,9 @@ def insert_results(
     with psycopg2.connect(
         user=db_user, password=db_password, dbname=db_name, host=db_host
     ) as conn:
-        logger.info("Connection to Postgres Database Opened!!")
+        # logger.info("Connection to Postgres Database Opened!!")
         with conn.cursor() as cursor:
-            logger.info("Writing data to the inventory_history in the petstore database in Postgres")
+            # logger.info("Writing data to the inventory_history in the petstore database in Postgres")
             cursor.execute(
                 """
                 insert into inventory_history (
